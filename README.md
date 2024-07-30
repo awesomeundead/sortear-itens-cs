@@ -1,1 +1,1 @@
-> php rand.php
+php rand.php
