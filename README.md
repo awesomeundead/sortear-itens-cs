@@ -1,4 +1,4 @@
-C:\\%PATH%\php.exe rand.php
+%PATH%\php.exe rand.php
 
 OR
 
