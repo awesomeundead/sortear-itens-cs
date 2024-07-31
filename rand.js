@@ -50,8 +50,6 @@ function rand(min, max)
 
 array = array.sort(() => Math.random() - 0.5); // embaralha o array
 
-console.log(array);
-
 random = rand(0, array.length - 1); // gera um número aleatório, 0 - 199
 rarity = array[random]; // obtém a raridade do item
 
