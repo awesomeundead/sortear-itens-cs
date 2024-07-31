@@ -1,4 +1,4 @@
-# PHP OPTION
+## PHP
 
 %PATH%\php.exe rand.php
 
@@ -6,6 +6,6 @@ OR
 
 php rand.php
 
-# NODE OPTION
+## JAVASCRIPT/NODE
 
 node rand.js
