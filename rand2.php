@@ -40,13 +40,13 @@ $items_ratity = [
 
 for ($i= 1; $i <= 200; $i++)
 {
-    if ($i <= 160)
+    if ($i <= 150)
     {
-        $array[$i] = 'rare_weapon'; //80% = 160
+        $array[$i] = 'rare_weapon'; // 75% = 150
     }
     elseif ($i <= 190)
     {
-        $array[$i] = 'mythical_weapon'; // 15% = 30
+        $array[$i] = 'mythical_weapon'; // 20% = 40
     }
     elseif ($i <= 199)
     {
