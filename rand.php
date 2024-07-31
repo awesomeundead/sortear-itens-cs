@@ -23,22 +23,25 @@ $items_ratity = [
     ]
 ];
 
-for ($i= 1; $i <= 160; $i++)
+for ($i= 1; $i <= 200; $i++)
 {
-    $array[$i] = 'rare_weapon'; //80% = 160
+    if ($i <= 160)
+    {
+        $array[$i] = 'rare_weapon'; //80% = 160
+    }
+    elseif ($i <= 190)
+    {
+        $array[$i] = 'mythical_weapon'; // 15% = 30
+    }
+    elseif ($i <= 199)
+    {
+        $array[$i] = 'legendary_weapon'; // 4,5% = 9
+    }
+    else
+    {
+        $array[$i] = 'ancient_weapon'; // 0,5% = 1
+    }
 }
-
-for ($i= 161; $i <= 194; $i++)
-{
-    $array[$i] = 'mythical_weapon'; // 17% = 34
-}
-
-for ($i= 195; $i <= 199; $i++)
-{
-    $array[$i] = 'legendary_weapon'; // 2,5% = 5
-}
-
-$array[200] = 'ancient_weapon'; // 0,5% = 1
 
 shuffle($array); // embaralha o array
 
