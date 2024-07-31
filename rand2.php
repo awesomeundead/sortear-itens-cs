@@ -15,7 +15,7 @@ $items = [
     'AWP'        => 'AWP (StatTrak™) | Aberração Cromática (Testada em Campo)'
 ];
 
-$items_ratity = [
+$items_rarity = [
     'rare_weapon' => [
         'UMP-45' => 50,
         'MP5-SD' => 25,
@@ -61,11 +61,11 @@ for ($i= 1; $i <= 200; $i++)
 shuffle($array); // embaralha o array
 
 $random = rand(0, 199); // gera um número aleatório
-$ratity = $array[$random]; // obtém a raridade do item
+$rarity = $array[$random]; // obtém a raridade do item
 
 $array = [];
 
-foreach ($items_ratity[$ratity] as $weapon => $percentage)
+foreach ($items_rarity[$rarity] as $weapon => $percentage)
 {
     for ($i = 0; $i < $percentage; $i++)
     {

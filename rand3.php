@@ -1,5 +1,12 @@
 <?php
 
+$rarities = [
+    'rare_weapon'      => 150,
+    'mythical_weapon'  => 40,
+    'legendary_weapon' => 9,
+    'ancient_weapon'   => 1
+];
+
 $items_rarity = [
     'rare_weapon' => [
         'UMP-45 (StatTrak™) | Instrução (Pouco Usada)',
@@ -23,34 +30,22 @@ $items_rarity = [
     ]
 ];
 
-for ($i= 1; $i <= 200; $i++)
+foreach ($rarities as $rarity => $value)
 {
-    if ($i <= 150)
+    for ($i = 0; $i < $value; $i++)
     {
-        $array[$i] = 'rare_weapon'; // 75% = 150
-    }
-    elseif ($i <= 190)
-    {
-        $array[$i] = 'mythical_weapon'; // 20% = 40
-    }
-    elseif ($i <= 199)
-    {
-        $array[$i] = 'legendary_weapon'; // 4,5% = 9
-    }
-    else
-    {
-        $array[$i] = 'ancient_weapon'; // 0,5% = 1
+        $array[] = $rarity;
     }
 }
 
 shuffle($array); // embaralha o array
 
-$random = rand(0, 199); // gera um número aleatório
+$length = count($array); // conta quantos elementos no array, 200
+$random = rand(0, $length - 1); // gera um número aleatório, 0 - 199
 $rarity = $array[$random]; // obtém a raridade do item
 
-$length = count($items_rarity[$rarity]); // conta quantos itens existem de acordo com a raridade
-
-$random = rand(0, $length - 1); // gera um número aleatório
+$length = count($items_rarity[$rarity]); // conta quantos itens existem de acordo com a raridade, 3
+$random = rand(0, $length - 1); // gera um número aleatório, 0 - 2
 $item = $items_rarity[$rarity][$random]; // obtém o item
 
 echo "{$rarity} : {$item}\n";
