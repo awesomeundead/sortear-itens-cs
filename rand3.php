@@ -1,5 +1,9 @@
 <?php
 
+/*
+ *  versão do rand1.php melhorada
+ */
+
 $rarities = [
     'rare_weapon'      => 150,
     'mythical_weapon'  => 40,
